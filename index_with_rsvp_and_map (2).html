@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Luis & Jacqueline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            color: #000;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background-color: #f7f7f7;
+        }
+        h1, h2 {
+            font-family: 'Cinzel', serif;
+            color: #333;
+            margin: 0.2em 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #555;
+        }
+        h2 {
+            font-size: 2em;
+            color: #888;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            max-width: 700px;
+            margin: 1.5em auto;
+        }
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .info-block {
+            margin-bottom: 30px;
+        }
+        .info-block h3 {
+            font-family: 'Cinzel', serif;
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .info-block p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+        .silver {
+            color: #aaa;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Luis & Jacqueline</h1>
+        <h2>02 de Agosto de 2025</h2>
+        <p class="quote">"Existen ‘para siempres’ que comienzan en el momento más inesperado, <br>
+        cuando menos lo imaginabas, y cambian tu vida para siempre."</p>
+    </header>
+
+    <section>
+        <div class="info-block">
+            <p>Con la bendición de Dios y el amor de nuestras familias,</p>
+            <p>tenemos el honor de invitarte a celebrar nuestra unión matrimonial.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Padres</h3>
+            <p><strong>La novia:</strong> María Lucía Ramírez</p>
+            <p><strong>El novio:</strong> Luis Fernando Godoy Guzmán y Amarilis Godoy</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Padrinos de Velación</h3>
+            <p>Carlos Zetino y Rubi Zetino</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Ceremonia Religiosa</h3>
+            <p>2:00 PM<br>
+            Saint Bernard Catholic Church<br>
+            5700 St Bernard Dr, Riverdale, MD 20737</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Recepción</h3>
+            <p>3:30 PM<br>
+            Crystal Room<br>
+            5811 Riverdale Road, Riverdale, MD 20737</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Código de Vestimenta</h3>
+            <p>Formal<br>
+            (Reservar el blanco para la Novia)</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Mesa de Regalos</h3>
+            <p>Nos llevamos el mejor tesoro: tu presencia y bendiciones.<br>
+            Si deseas sumar un detalle a nuestro viaje de amor,<br>
+            una contribución económica será muy bienvenida.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Confirmación de Asistencia</h3>
+            <p>Por favor, confirma tu asistencia a más tardar el <strong>27 de Junio de 2025</strong>.</p>
+        </div>
+    
+    <div class="info-block" style="text-align:center;">
+        <h3>Cuenta Regresiva</h3>
+        <p id="countdown" style="font-size: 1.5em; color: #555;"></p>
+    </div>
+
+    <div class="info-block" style="text-align:center;">
+        <a href="mailto:jackiegodoy@gmail.com?subject=Confirmación%20de%20Asistencia%20-%20Boda%20Luis%20y%20Jacqueline" 
+           style="display:inline-block; background:#aaa; color:#000; padding:12px 20px; text-decoration:none; font-weight:bold; border-radius:6px;">
+            Confirmar Asistencia
+        </a>
+    </div>
+</section>
+
+<script>
+    // Countdown Timer
+    const weddingDate = new Date("August 2, 2025 14:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = days + " días " + hours + "h " 
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            countdownElement.innerHTML = "¡Ya llegó el gran día!";
+        }
+    }, 1000);
+</script>
+
+
+    <footer>
+        ¡Te esperamos con mucho amor!<br>
+        Luis & Jacqueline
+    
+    <section>
+        <div class="info-block">
+            <h3>Confirmación de Asistencia</h3>
+            <form action="mailto:jackiegodoy727@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nombre Completo:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="attendance">¿Asistirá?</label><br>
+                <select id="attendance" name="attendance" required>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select><br><br>
+
+                <label for="guests">Número de Acompañantes:</label><br>
+                <input type="number" id="guests" name="guests" min="0" required><br><br>
+
+                <label for="comments">Comentarios adicionales:</label><br>
+                <textarea id="comments" name="comments"></textarea><br><br>
+
+                <input type="submit" value="Enviar Confirmación">
+            </form>
+        </div>
+
+        <div class="info-block">
+            <h3>Ubicación de la Boda</h3>
+            <p>Haz clic en los mapas para ver las ubicaciones:</p>
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=Saint%20Bernard%20Catholic%20Church%2C%205700%20St%20Bernard%20Dr%2C%20Riverdale%2C%20MD%2020737&key=AIzaSyA5r8GRFFVKl0bpREmlJAkR8hAGKObHGos"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe><br><br>
+
+            <p>Recepción:</p>
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=Crystal%20Room%2C%205811%20Riverdale%20Road%2C%20Riverdale%2C%20MD%2020737&key=AIzaSyA5r8GRFFVKl0bpREmlJAkR8hAGKObHGos"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <footer>
+        ¡Te esperamos con mucho amor!<br>
+        Luis & Jacqueline
+    </footer>
+
+
+</body>
+</html>
